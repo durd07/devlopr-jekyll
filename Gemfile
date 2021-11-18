@@ -6,6 +6,7 @@ gem 'kramdown'
 gem 'rack-jekyll'
 gem 'rack'
 gem 'puma'
+gem 'kramdown-plantuml'
 
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and

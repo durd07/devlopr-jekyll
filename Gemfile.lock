@@ -31,6 +31,7 @@ GEM
     faraday-rack (1.0.0)
     ffi (1.15.4)
     forwardable-extended (2.6.0)
+    htmlentities (4.3.4)
     http_parser.rb (0.6.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
@@ -73,6 +74,11 @@ GEM
       rexml
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
+    kramdown-plantuml (1.2.0)
+      htmlentities (~> 4)
+      kramdown (~> 2.3)
+      kramdown-parser-gfm (~> 1.1)
+      open3 (~> 0.1)
     liquid (4.0.3)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -84,6 +90,7 @@ GEM
     octokit (4.21.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
+    open3 (0.1.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (4.0.6)
@@ -148,6 +155,7 @@ DEPENDENCIES
   jekyll-sitemap (~> 1.4.0)
   jgd (~> 1.12)
   kramdown
+  kramdown-plantuml
   puma
   rack
   rack-jekyll
@@ -157,4 +165,4 @@ DEPENDENCIES
   webrick (~> 1.7)
 
 BUNDLED WITH
-   2.2.29
+   2.2.31

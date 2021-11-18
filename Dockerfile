@@ -1,5 +1,7 @@
 FROM jekyll/jekyll:latest as build
 
+RUN apk add openjdk11 graphviz
+
 WORKDIR /srv/jekyll
 
 ADD . /srv/jekyll

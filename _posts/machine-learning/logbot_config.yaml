@@ -1,0 +1,56 @@
+# Tony Wang(tony.h.wang@nokia-sbell.com)
+# all user defined parameters are set here.
+# config.yaml for foss-ssc-12
+# only used by tonyaw
+common:
+  base_path: "/root_fs/home/nfs_volume/base_path"
+  analysis_case_name: "spark_test"
+  cpu_core_count: 1
+  source_code_path: ""
+  log_clustering_template_path: /etc/logbot/log_clustering_template.yaml 
+  # log_clustering_template_path: /etc/logbot/log_clustering_template.yaml
+  result_analysis_template_path: /etc/logbot/result_analysis_template.yaml
+  es_insertion_template_path: /etc/logbot/es_insertion_template.yaml
+  frequency_calculation_template_path: /etc/logbot/frequency_calculation_template.yaml
+
+
+source:
+  training_csv_file_path: "training_data.csv"  
+  prediction_csv_file_path: "prediction_data.csv"
+
+
+# india service env
+# logbot:
+#   kibana:
+#     one_cluster_url_template: "http://10.71.136.246:31930/app/dashboards#/view/74833020-9e7c-11eb-9376-1ddcb2b85287?_g=('0':u,'1':n,'2':d,'3':e,'4':f,'5':i,'6':n,'7':e,'8':d,time:(from:'%sZ',to:'%sZ'))&_a=('0':u,'1':n,'2':d,'3':e,'4':f,'5':i,'6':n,'7':e,'8':d,description:'',filters:!(('$state':(store:appState),meta:(alias:!n,controlledBy:'1618554248218',disabled:!f,index:'7a59ceb0-8625-11eb-9376-1ddcb2b85287',key:cluster_id,negate:!f,params:(query:%s),type:phrase),query:(match_phrase:(cluster_id:%s))),('$state':(store:appState),meta:(alias:!n,controlledBy:'1618898783360',disabled:!f,index:'7a59ceb0-8625-11eb-9376-1ddcb2b85287',key:task_name.keyword,negate:!f,params:(query:%s),type:phrase),query:(match_phrase:(task_name.keyword:%s)))),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:one_cluster_dashboard,viewMode:view)"
+#     # minutes
+#     one_cluster_delta: 60
+#   sparkapplication:
+#     docker_image: "bcmt-registry:5000/logbot/logbot:v0.2" 
+#     namespace: "logbot"
+#     main_app_path_prefix: "local:///root/"      
+#   mg_elasticsearch:
+#     host: "10.254.87.102"
+#     port: "9200"
+#     index_name: "logbot"
+#     version: "7.5"
+
+
+# dev env
+logbot:
+  kibana:
+    one_cluster_url_template: "http://135.252.135.240:31930/app/dashboards#/view/74833020-9e7c-11eb-9376-1ddcb2b85287?_g=(filters:!(),refreshInterval:(pause:!t,value:0),time:(from:'%sZ',to:'%sZ'))&_a=(description:'',filters:!(('$state':(store:appState),meta:(alias:!n,controlledBy:'1618554248218',disabled:!f,index:'7a59ceb0-8625-11eb-9376-1ddcb2b85287',key:cluster_id,negate:!f,params:(query:%s),type:phrase),query:(match_phrase:(cluster_id:%s))),('$state':(store:appState),meta:(alias:!n,controlledBy:'1618970650484',disabled:!f,index:'7a59ceb0-8625-11eb-9376-1ddcb2b85287',key:task_name.keyword,negate:!f,params:(query:%s),type:phrase),query:(match_phrase:(task_name.keyword:%s)))),fullScreenMode:!f,options:(hidePanelTitles:!f,useMargins:!t),query:(language:kuery,query:''),timeRestore:!f,title:one_cluster_dashboard,viewMode:view)"
+    # minutes
+    one_cluster_delta: 60
+  sparkapplication:
+    #docker_image: "bcmt-registry:5000/logbot/logbot:v1.2" 
+    docker_image: "logbot:dev" 
+    namespace: "logbot"
+    #main_app_path_prefix: "local:///root_fs/home/nfs_volume/tonyaw/sandbox/log_analytics/log_cluster/src/log_clusterer/spark/"
+    main_app_path_prefix: "local:///root_fs/home/nfs_volume/mocui/ntas-ml-super-project/log_analytics/log_cluster/src/log_clusterer/spark/"
+    executor_instances: "3"
+  mg_elasticsearch:
+    host: "135.252.135.253"
+    port: "31920"
+    index_name: "logbot"
+    version: "7.5"
