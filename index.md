@@ -61,25 +61,25 @@ layout: home
 ### Useful Tools
 
 <form action="http://www.baidu.com.cn/s" method="get" target="_blank">
-    <a href="http://www.baidu.com" target="_blank"><img width="80px" height="26px" border="0" src="/assets/images/logos/baidu.png"></a>
+    <a href="http://www.baidu.com" target="_blank"><img width="80px" height="26px" border="0" src="/assets/img/baidu.png"></a>
     <input type="text" name="wd" size="20"/>
     <input type="submit" value="百度一下" style="width:80px;"/>
 </form>
 
 <form action="http://www.google.com/search" method="get" target="_blank">
-    <a href="http://www.google.com" target="_blank"><img width="80px" height="26px" border="0" src="/assets/images/logos/google.svg"></a>
+    <a href="http://www.google.com" target="_blank"><img width="80px" height="26px" border="0" src="/assets/img/google.png"></a>
     <input size="20" name="q"  type="text"/>
     <input name="Search" value="Search" type="submit" style="width:80px;"/>
 </form>
 
 <form name="cppsearch" action="https://cplusplus.com/search.do" target="_blank">
-  <a href="http://www.cplusplus.com" target="_blank"><img width="80px" height="26px" border="0" src="/assets/images/logos/cpp.gif"></a>
+  <a href="http://www.cplusplus.com" target="_blank"><img width="80px" height="26px" border="0" src="/assets/img/cpp.gif"></a>
   <input type="text" name="q" size="20">
   <input type="submit" value="Search" style="width:80px;">
 </form>
 
 <form name="cppsearch" action="https://en.cppreference.com/mwiki/index.php" id="searchform" target="_blank">
-  <a href="http://en.cppreference.com" target="_blank"><img width="80px" height="26px" border="0" src="/assets/images/logos/cpp.gif"></a>
+  <a href="http://en.cppreference.com" target="_blank"><img width="80px" height="26px" border="0" src="/assets/img/cpp.gif"></a>
   <input type="hidden" name="title" value="Sepcial:Search">
   <input type="text" name="search" size="20" accesskey="f" id="searchInput">
   <input type="submit" value="Search" id="searchButton" style="width:80px;">
