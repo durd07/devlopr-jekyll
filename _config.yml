@@ -18,6 +18,8 @@ urls:
 #      url : /contact
     - text: About
       url: /about
+    - text: Dir
+      url: /uploads
 
 
 # Edit Author details (For multi authors check _data/authors.yml)
