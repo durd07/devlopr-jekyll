@@ -1,5 +1,13 @@
 ---
 title: siftester
+layout: post
+author: felixdu
+title: Siftester
+date: 2020-05-23T09:52:20.613Z
+thumbnail: /assets/img/posts/hello.jpg
+category: [siftester]
+summary: Siftester
+permalink: /blog/work/siftester
 ---
 # Integrate SIFTESTER into NTAS
 
